@@ -1,0 +1,20 @@
+const getters = {
+  sidebarStatus: state => state.app.sidebarStatus,
+  tabValue: state => state.app.tabValue,
+  token: state => state.user.token,
+  avatar: state => state.user.avatar,
+  name: state => state.user.name,
+  sellerID: state => state.user.id,
+  sellerInfo: state => state.user.sellerInfo,
+  mobile: state => state.user.mobile,
+  introduction: state => state.user.introduction,
+  status: state => state.user.status,
+  roles: state => state.user.roles,
+  visitedViews: state => state.tabs.visitedViews,
+  cachedViews: state => state.tabs.cachedViews,
+  permissions: state => state.permission.permissions,
+  navs: state => state.nav.navs,
+  navValue: state => Array.from(state.nav.navs).find((n) => n.active).name,
+  sum: state => state.orderSum.sum,
+};
+export default getters;
